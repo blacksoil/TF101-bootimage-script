@@ -1,0 +1,2 @@
+export ARCH=arm
+export CROSS_COMPILE=/home/aharijanto/Downloads/gcc-arm-none-eabi-4_7-2013q3/bin/arm-none-eabi-

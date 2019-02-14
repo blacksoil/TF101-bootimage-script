@@ -1,0 +1,9 @@
+echo "Pushing blob to device..."
+adb push $PWD/out/blob /cache || (echo "Failed!" && exit 1)
+
+echo "Running DD on device..."
+adb shell dd if=/cache/blob of=/dev/block/mmcblk0p4 || (echo "Failed!" && exit 1)
+
+echo "Syncing..."
+adb shell sync
+echo "Done!"
